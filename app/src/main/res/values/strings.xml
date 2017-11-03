@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Listas_Intents</string>
     <string name="elige_un_pais">Elige un pais:</string>
+    <string name="ejercicio_1">Ejercicio SPINNER</string>
+    <string name="ejercicio_2">Ejercicio LISTVIEW</string>
+    <string name="ejercicio_3">Ejercicio TABS</string>
+    <string name="action_settings">Buscar</string>
+    <string name="action_other">Otros</string>
+    <string name="icono_web">icono</string>
 </resources>
