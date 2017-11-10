@@ -28,9 +28,7 @@ public class Ej2 extends AppCompatActivity {
         setContentView(R.layout.activity_ej2);
 
 
-        Favorito[] datos =
-                new Favorito[0];
-        datos = new Favorito[]{
+        Favorito[] datos  = new Favorito[]{
                 new Favorito("Reddit","http://www.reddit.com",R.drawable.reddit,"Foro Reddit"),
                 new Favorito("Reddit","http://www.reddit.com",R.drawable.reddit,"Foro Reddit"),
                 new Favorito("Reddit","http://www.reddit.com",R.drawable.reddit,"Foro Reddit"),
@@ -45,7 +43,7 @@ public class Ej2 extends AppCompatActivity {
         lstFavoritos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> a, View v, int position, long id)
             {
-                //Alternativa 1:
+
                 String url =
                         ((Favorito)a.getItemAtPosition(position)).getUrl();
                 //long opcion = a.getItemIdAtPosition(position);
@@ -62,10 +60,10 @@ public class Ej2 extends AppCompatActivity {
     }
 
     class AdaptadorFavoritos extends ArrayAdapter<Favorito> {
-        private Favorito[] dat;
+
         public AdaptadorFavoritos(Context context, Favorito[] dat) {
-            super(context, R.layout.listitem_favoritos, dat);
-            this.dat = dat;
+            super(context, R.layout.listitem_favoritos,dat);
+
         }
 
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -73,10 +71,10 @@ public class Ej2 extends AppCompatActivity {
             View item = inflater.inflate(R.layout.listitem_favoritos, null);
 
             TextView lblNombre = (TextView) item.findViewById(R.id.lblNombre);
-            lblNombre.setText(dat[position]/*super.getItem(position)*/.getNombre());
+            lblNombre.setText(super.getItem(position).getNombre());
 
             ImageView icon=(ImageView) item.findViewById(R.id.iconWeb);
-            icon.setImageResource(dat[position]/*super.getItem(position)*/.getIcono());
+            icon.setImageResource(super.getItem(position).getIcono());
 
 
             TextView lblUrl =

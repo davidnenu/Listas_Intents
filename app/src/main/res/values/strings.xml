@@ -7,4 +7,5 @@
     <string name="action_settings">Buscar</string>
     <string name="action_other">Otros</string>
     <string name="icono_web">icono</string>
+    <string name="no_hay_chats">No hay chats</string>
 </resources>
